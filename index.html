@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CyberShield | Cyber Safety Awareness Platform</title>
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Matrix Background Canvas -->
+<canvas id="matrix-canvas"></canvas>
+<div class="grid-overlay"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo"><i class="fas fa-shield-haltered"></i> CyberShield</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#modules">Learning Modules</a></li>
+        <li><a href="#scamDB">Scam Detector</a></li>
+        <li><a href="#report">Report Fraud</a></li>
+        <li><a href="#tips">Safety Alerts</a></li>
+        <li><a href="#language">Languages</a></li>
+        <li><a href="#footer">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Stay Safe in the Digital World</h1>
+            <p style="font-size:1.2rem; margin-top:0.5rem;">Empower yourself against cyber threats — real-time awareness, scam detection, and global protection.</p>
+            <div class="hero-buttons">
+                <button class="neon-btn" id="learnCyberBtn"><i class="fas fa-graduation-cap"></i> Learn Cyber Safety</button>
+                <button class="neon-btn neon-blue-btn" id="reportScamHeroBtn"><i class="fas fa-flag"></i> Report a Scam</button>
+            </div>
+        </div>
+        <div class="shield-glow">
+            <i class="fas fa-shield-virus"></i>
+        </div>
+    </section>
+
+    <!-- Learning Modules -->
+    <section id="modules">
+        <h2><i class="fas fa-brain"></i> Cyber Safety Learning Modules</h2>
+        <div class="modules-grid">
+            <div class="card"><i class="fas fa-fish"></i><h3>Phishing Awareness</h3><p>Spot deceptive emails & fake login pages.</p></div>
+            <div class="card"><i class="fas fa-key"></i><h3>Password Security</h3><p>Strong passwords & 2FA best practices.</p></div>
+            <div class="card"><i class="fas fa-hashtag"></i><h3>Social Media Safety</h3><p>Privacy settings & avoid oversharing.</p></div>
+            <div class="card"><i class="fas fa-credit-card"></i><h3>Online Payment Protection</h3><p>Secure UPI & banking habits.</p></div>
+            <div class="card"><i class="fas fa-bug"></i><h3>Malware Detection</h3><p>Identify & remove malicious software.</p></div>
+        </div>
+    </section>
+
+    <!-- Scam Examples Database -->
+    <section id="scamDB">
+        <h2><i class="fas fa-database"></i> Fake Message & Scam Examples Database</h2>
+        <div class="scam-grid">
+            <div class="card scam-card"><i class="fas fa-mobile-alt"></i><h3>📱 Fake OTP Scam</h3><p>"Your account blocked! Share OTP to reactivate." 🚫 Never share OTP.</p><button class="identify-threat-btn neon-btn" style="margin-top:12px; font-size:0.8rem;" data-scam="OTP Scam">Identify Threat</button></div>
+            <div class="card scam-card"><i class="fas fa-university"></i><h3>🏦 Fake Bank Message</h3><p>"Alert: ₹45,000 debited. Call helpline urgently" — fraudulent link.</p><button class="identify-threat-btn neon-btn" style="margin-top:12px;" data-scam="Bank Scam">Identify Threat</button></div>
+            <div class="card scam-card"><i class="fas fa-trophy"></i><h3>🎉 Lottery Scam</h3><p>"You won $2 Million! Pay processing fee to claim."</p><button class="identify-threat-btn neon-btn" style="margin-top:12px;" data-scam="Lottery Scam">Identify Threat</button></div>
+            <div class="card scam-card"><i class="fas fa-envelope"></i><h3>📧 Phishing Email</h3><p>"Verify your Apple ID now or account suspended." Fake login portal.</p><button class="identify-threat-btn neon-btn" style="margin-top:12px;" data-scam="Phishing Email">Identify Threat</button></div>
+        </div>
+    </section>
+
+    <!-- Fraud Reporting System -->
+    <section id="report">
+        <h2><i class="fas fa-file-alt"></i> Fraud Reporting System</h2>
+        <div class="glass-card report-form">
+            <form id="fraudReportForm">
+                <div class="form-group"><input type="text" id="repName" placeholder="Full Name" required></div>
+                <div class="form-group"><input type="email" id="repEmail" placeholder="Email Address" required></div>
+                <div class="form-group"><select id="scamType"><option>Select Scam Type</option><option>Phishing</option><option>OTP Fraud</option><option>Online Payment Fraud</option><option>Lottery Scam</option><option>Identity Theft</option></select></div>
+                <div class="form-group"><textarea rows="3" id="scamDesc" placeholder="Describe the incident..."></textarea></div>
+                <div class="form-group"><input type="file" id="screenshotUpload" accept="image/*"></div>
+                <button type="submit" class="neon-btn neon-blue-btn" style="width:100%"><i class="fas fa-shield-alt"></i> Submit Report</button>
+            </form>
+            <p id="reportStatus" style="margin-top:15px; text-align:center; color:#00ff88;"></p>
+        </div>
+    </section>
+
+    <!-- Safety Tips Dashboard -->
+    <section id="tips">
+        <h2><i class="fas fa-bell"></i> Safety Tips Dashboard</h2>
+        <div class="tips-grid" id="safetyTipsContainer">
+            <div class="card alert-card"><i class="fas fa-lightbulb"></i><h3>Daily Cyber Tip</h3><p id="dailyTip">Enable 2FA on all accounts that offer it.</p></div>
+            <div class="card alert-card"><i class="fas fa-skull-crosswalk"></i><h3>Latest Threats</h3><p id="latestThreat">⚠️ "Deepfake voice scams rising – verify calls."</p></div>
+            <div class="card alert-card"><i class="fas fa-shield-alt"></i><h3>Prevention Methods</h3><p>Use password manager & avoid suspicious links.</p></div>
+        </div>
+    </section>
+
+    <!-- Multi-language Support -->
+    <section id="language">
+        <h2><i class="fas fa-globe"></i> Multi-language Support</h2>
+        <div class="glass-card" style="display:inline-block; padding: 1rem 2rem;">
+            <label for="langSelect" style="margin-right:1rem;">🌐 Choose Language: </label>
+            <select id="langSelect" class="glass-card">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+            </select>
+            <p id="langMsg" style="margin-top:20px;">Selected: English | Your safety matters globally.</p>
+        </div>
+    </section>
+
+    <!-- Statistics Dashboard -->
+    <section>
+        <h2><i class="fas fa-chart-line"></i> Threat Intelligence Dashboard</h2>
+        <div class="stats-dashboard">
+            <div class="stat-card"><i class="fas fa-exclamation-triangle fa-2x"></i><div class="stat-number" id="fraudStat">12,847</div><p>Fraud cases reported</p></div>
+            <div class="stat-card"><i class="fas fa-user-shield fa-2x"></i><div class="stat-number" id="protectedStat">189.2K</div><p>Users protected</p></div>
+            <div class="stat-card"><i class="fas fa-bug fa-2x"></i><div class="stat-number" id="scamsDetected">9,423</div><p>Scams detected</p></div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <div><i class="fas fa-shield-haltered"></i> CyberShield — Your Digital Armor</div>
+    <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#"><i class="fas fa-phone-alt"></i> Cyber Helpline: 1930</a>
+    </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
