@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1778099339762,
+    "repName": "samrat",
+    "repEmail": "samrat123@gmail.com",
+    "scamType": "OTP Fraud",
+    "scamDesc": "malicious links are sent via email or SMS that lead to fake websites that steal your login credentials and then ask for the OTP",
+    "screenshot": "1778099339747-640768824.jpeg",
+    "timestamp": "2026-05-06T20:28:59.762Z"
+  },
+  {
+    "id": 1778100009562,
+    "repName": "swapna",
+    "repEmail": "swapna123@gmail.com",
+    "scamType": "Lottery Scam",
+    "scamDesc": "Receiving a notification about a huge win for a competition or lottery you did not enter",
+    "screenshot": "1778100009522-824552846.jpeg",
+    "timestamp": "2026-05-06T20:40:09.562Z"
+  }
+]
