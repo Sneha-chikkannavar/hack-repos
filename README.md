@@ -4,7 +4,7 @@ Cyber Safety & Awareness Hub is a web/mobile platform designed to educate users 
 The application focuses on user education and prevention instead of complex AI-based threat detection. It provides easy-to-understand cyber safety content, fraud reporting features, safety alerts, and multilingual support so users from different backgrounds can access cybersecurity awareness resources.
 
 TEAM MEMBERS
-1.Rakshita.K.Patil
-2.Swapna Konnur
-3.Sneha Chikkannavar
-4.Rajeshwari.M.Patil
+1.Rakshita.K.Patil <br>
+2.Swapna Konnur  <br>
+3.Sneha Chikkannavar  <br>
+4.Rajeshwari.M.Patil  <br>
